@@ -4,8 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rinterio</title>
+
+    <!-- Tailwind and Daisyui CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font Manrope CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/35f5839679.js" crossorigin="anonymous"></script>
+
+    <style>
+        .font-manrope{
+            font-family: "Manrope", sans-serif;
+       }
+   </style>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'arrow-bg': 'rgb(171, 239, 95)',
+            'button-bg': 'rgba(171, 239, 95, 0.5)',
+            'nav-bg': '	#d0d0d0',
+            'title-color': 'rgb(33, 33, 33)',
+            'search-color': 'rgb(255,255,255)',
+          },
+        },
+      },
+    }
+  </script>
+
 </head>
 <body>
+
+     <!-- Header Section  -->
+     <header class="container mx-auto pb-24 lg:pt-2 ">
+        <nav class="mx-3">
+          <!-- Navbar  -->
+          <div class="navbar flex justify-between mb-10">
+            <!-- Nav starts  -->
+            <div class="navbar-start">
+            <!-- Logo  -->
+              <div class="Logo flex gap-2">
+                <!-- Icon  --> 
+                 <div class="pt-1">          
+                 <i class="-rotate-45 w-7 h-7 pt-1.5 rounded-full text-center bg-arrow-bg fa-solid fa-arrow-right"></i></div> 
+                <!-- Title  -->
+                <h1 class="text-3xl font-extrabold  text-title-color">Rinterio</h1>
+              </div>
+            </div>
+            
+            <!-- Nav center -->
+            <div class="navbar-center hidden lg:flex mt-4 space-x-3">
+              <a class="font-bold" href="">Home</a>
+              <a class="font-bold text-stone-400" href="">Services</a>
+              <a class="font-bold text-stone-400" href="">Portfolio</a>
+              <a class="font-bold text-stone-400" href="">Blogs</a>
+              <a class="font-bold text-stone-400" href="">Contact Us</a>
+            </div>
+            
+            <!-- Nav end -->
+            <div class="navbar-end hidden md:block lg:flex space-x-3">
+            <!-- Search button  -->
+              <button class="btn btn-ghost btn-circle text-stone-500 bg-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+              
+              <!-- cart button  -->
+              <button class="btn btn-ghost btn-circle text-stone-600 bg-white">
+                <div class="w-6">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+               </button>
+               
+               <!-- Arrow button  -->
+               <button class="btn bg-arrow-bg text-lg font-extrabold rounded-full">Book Consult<div class="Logo flex gap-2">
+                <!-- Icon  -->         
+                <i class="-rotate-45 w-8 h-8 pt-2 rounded-full text-center bg-black text-white fa-solid fa-arrow-right"></i>
+              </div></button>
+            </div>
+            
+            <!-- Hamburger button  -->
+            <button class="btn btn-square bg-white rounded-full btn-ghost lg:hidden md:block">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block h-5 w-5 stroke-current">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Banner  -->
+          <div class="space-y-6">
+            <div class="flex justify-center mx-5"> 
+              <img src="assets/banner.png" alt="">
+            </div>
+            <!-- banner text  -->
+            <div class="md:mx-6 lg:mx-44 text-center space-y-6">
+              <h1 class="lg:text-6xl md:text-5xl text-2xl font-extrabold text-title-color">A barn house of this design has a striking appearance</h1>
+              <p class="text-title-color lg:text-base lg:mx-24 md:mx-32  text-xs font-medium">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+              <button class="btn text-lg  font-extrabold rounded-full text-title-color bg-button-bg lg:px-4 md:px-4 px-16">View Details</details>
+              <div class="Logo flex gap-2">
+                <!-- Icon  -->         
+                <i class="-rotate-45 w-8 h-8 pt-2 rounded-full text-center bg-arrow-bg fa-solid fa-arrow-right"></i>
+              </div>
+             </button>
+            </div>
+          </div>
+        </nav>
+    </header>
     
 </body>
 </html>
